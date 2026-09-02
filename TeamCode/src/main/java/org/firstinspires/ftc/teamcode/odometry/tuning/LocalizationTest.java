@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.tuning;
+package org.firstinspires.ftc.teamcode.odometry.tuning;
 
 import com.acmerobotics.dashboard.FtcDashboard;
 import com.acmerobotics.dashboard.telemetry.MultipleTelemetry;
@@ -8,9 +8,9 @@ import com.acmerobotics.roadrunner.PoseVelocity2d;
 import com.acmerobotics.roadrunner.Vector2d;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-import org.firstinspires.ftc.teamcode.Drawing;
-import org.firstinspires.ftc.teamcode.MecanumDrive;
-import org.firstinspires.ftc.teamcode.TankDrive;
+import org.firstinspires.ftc.teamcode.odometry.Drawing;
+import org.firstinspires.ftc.teamcode.odometry.MecanumDrive;
+import org.firstinspires.ftc.teamcode.odometry.TankDrive;
 
 public class LocalizationTest extends LinearOpMode {
     @Override
@@ -25,10 +25,10 @@ public class LocalizationTest extends LinearOpMode {
             while (opModeIsActive()) {
                 drive.setDrivePowers(new PoseVelocity2d(
                         new Vector2d(
-                                -gamepad1.left_stick_y,
-                                -gamepad1.left_stick_x
+                                -gamepad1.left_stick_y * 0.5,
+                                -gamepad1.left_stick_x * 0.5
                         ),
-                        -gamepad1.right_stick_x
+                        -gamepad1.right_stick_x * 0.5
                 ));
 
                 drive.updatePoseEstimate();
