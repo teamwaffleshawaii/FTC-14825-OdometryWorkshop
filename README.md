@@ -3,12 +3,12 @@ This repository contains sample code used by the FTC 14825's Odometry workshop f
 Project uses the Road Runner Library with 2 Odometry Pods + goBILDA Pinpoint Computer
 A copy of the FTC Robot Controller 11.2.1 SDK.
 
-## Welcome!
 This GitHub repository contains the source code that is used to build an Android app to control a *FIRST* Tech Challenge competition robot.  To use this SDK, download/clone the entire project to your local computer.
 
 ## Requirements
 To use this Android Studio project, you will need Android Studio Ladybug (2024.2) or later.
 To program your robot in Blocks or OnBot Java, you do not need Android Studio.
+
 For this project to compile, make sure you are using Java 17.
 
 ## Tuning Instructions
@@ -28,4 +28,4 @@ If you are an Android Studio programmer, there are several ways to download this
 ## Getting Help
 Email Team Waffles at teamwaffles@assets-school.org for any questions.
 
-Good luck teams!
+Good luck, teams!
