@@ -1,6 +1,6 @@
 ## NOTICE
 This repository contains sample code used by the FTC 14825's Odometry workshop for the Hawaii FTC 2026-2027 season.
-Project uses the Road Runner Library with 2 Odometry Pods + goBILDA Pinpoint Computer
+This project uses the Road Runner Library with 2 Odometry Pods + goBILDA Pinpoint Computer.
 A copy of the FTC Robot Controller 11.2.1 SDK.
 
 This GitHub repository contains the source code that is used to build an Android app to control a *FIRST* Tech Challenge competition robot.  To use this SDK, download/clone the entire project to your local computer.
