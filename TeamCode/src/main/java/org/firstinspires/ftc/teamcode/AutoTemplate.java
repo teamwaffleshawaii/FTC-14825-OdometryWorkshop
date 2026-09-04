@@ -6,6 +6,7 @@ package org.firstinspires.ftc.teamcode;
 import com.acmerobotics.roadrunner.Action;
 import com.acmerobotics.roadrunner.Pose2d;
 import com.acmerobotics.roadrunner.SequentialAction;
+import com.acmerobotics.roadrunner.Vector2d;
 import com.acmerobotics.roadrunner.ftc.Actions;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -29,12 +30,14 @@ public class AutoTemplate extends LinearOpMode {
 
         //TODO: Put your Odometry trajectory paths here!!!
         //Separate your paths by action (linearSlide movements, intake movements, servo movements, etc.)
-        Action trajectory1 = drive.actionBuilder(new Pose2d(60, -14, Math.toRadians(180) ))
+        Action trajectory1 = drive.actionBuilder(new Pose2d(0, 0, Math.toRadians(90) ))
+                .strafeToLinearHeading(new Vector2d(17, 26), Math.toRadians(180))
                 //...
                 .build();
 
 	    //TODO: Your trajectory 2 starting pose must match where the end of your trajectory 1 should be
-        Action trajectory2 = drive.actionBuilder(new Pose2d(0, 0, Math.toRadians(90) ))
+        Action trajectory2 = drive.actionBuilder(new Pose2d(17, 26, Math.toRadians(180) ))
+                .strafeToLinearHeading(new Vector2d(-22, -32), Math.toRadians(0))
                 //...
                 .build();
 
@@ -55,7 +58,7 @@ public class AutoTemplate extends LinearOpMode {
         if (opModeIsActive() && !isStopRequested()) {
             //Run your trajectory here when the code starts
             Actions.runBlocking(new SequentialAction(trajectory1));
-            //Actions.runBlocking(new SequentialAction(trajectory1,trajectory2));
+            Actions.runBlocking(new SequentialAction(trajectory2));
             //...
             //...
         }
