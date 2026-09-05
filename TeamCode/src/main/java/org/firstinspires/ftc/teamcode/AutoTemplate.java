@@ -31,13 +31,18 @@ public class AutoTemplate extends LinearOpMode {
         //TODO: Put your Odometry trajectory paths here!!!
         //Separate your paths by action (linearSlide movements, intake movements, servo movements, etc.)
         Action trajectory1 = drive.actionBuilder(new Pose2d(0, 0, Math.toRadians(90) ))
-                .strafeToLinearHeading(new Vector2d(17, 26), Math.toRadians(180))
+                .strafeToLinearHeading(new Vector2d( -40, 4), Math.toRadians(-180))
+                .strafeToSplineHeading(new Vector2d(17, -32), Math.toRadians(-36))
+                .strafeToSplineHeading(new Vector2d(0, 0), Math.toRadians(90))
+                .strafeToLinearHeading(new Vector2d( -40, 4), Math.toRadians(-180))
+                .strafeToSplineHeading(new Vector2d(17, -32), Math.toRadians(-36))
+                .strafeToSplineHeading(new Vector2d(0, 0), Math.toRadians(90))
                 //...
                 .build();
 
 	    //TODO: Your trajectory 2 starting pose must match where the end of your trajectory 1 should be
-        Action trajectory2 = drive.actionBuilder(new Pose2d(17, 26, Math.toRadians(180) ))
-                .strafeToLinearHeading(new Vector2d(-22, -32), Math.toRadians(0))
+        Action trajectory2 = drive.actionBuilder(new Pose2d(-34, -29, Math.toRadians(127) ))
+                .strafeToLinearHeading(new Vector2d(-23, -23), Math.toRadians(90))
                 //...
                 .build();
 
@@ -58,7 +63,7 @@ public class AutoTemplate extends LinearOpMode {
         if (opModeIsActive() && !isStopRequested()) {
             //Run your trajectory here when the code starts
             Actions.runBlocking(new SequentialAction(trajectory1));
-            Actions.runBlocking(new SequentialAction(trajectory2));
+
             //...
             //...
         }
